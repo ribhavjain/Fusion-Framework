@@ -223,6 +223,11 @@ GET            /login                                                           
 GET            /logout                                                                  securesocial.controllers.LoginPage.logout
 
 # ----------------------------------------------------------------------
+# GRAFANA VIEW
+# ----------------------------------------------------------------------
+GET            /reports                                                                 @controllers.Search.graphana
+
+# ----------------------------------------------------------------------
 # USER REGISTRATION
 # ----------------------------------------------------------------------
 GET            /signup                                                                  securesocial.controllers.Registration.startSignUp

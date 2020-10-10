@@ -65,6 +65,15 @@ class Search @Inject() (
     Ok(views.html.advancedsearch())
   }
 
+  def graphana() = PermissionAction(Permission.ViewDataset) { implicit request =>
+    Logger.debug("Starting Graphana")
+    Ok(views.html.reports.sensor1())
+  }
+//
+//  def graphana() {
+//    Ok(views.html.reports.sensor1())
+//  }
+
   def SearchByText(query: String) = PermissionAction(Permission.ViewDataset) { implicit request =>
     Logger.debug("Searching for" + query)
     Ok("")
